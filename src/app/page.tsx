@@ -1,10 +1,23 @@
 import React from 'react';
+import Image from 'next/image';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { AlertCircle, Clock, ShieldCheck, Zap } from 'lucide-react';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 py-12 md:py-24 text-center">
+      {/* Logo Section */}
+      <div className="mb-10 transform hover:scale-105 transition-transform duration-500">
+        <Image 
+          src="/LOGO PAINEL.png" 
+          alt="Elite Access Logo" 
+          width={280} 
+          height={100} 
+          className="mx-auto drop-shadow-2xl"
+          priority
+        />
+      </div>
+
       {/* Top Badge */}
       <div className="mb-8 animate-float">
         <span className="bg-primary/20 text-primary border border-primary/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] animate-pulse-glow glow-crimson">
