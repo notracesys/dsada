@@ -9,7 +9,7 @@ export default function Home() {
       {/* Logo Section */}
       <div className="mb-10 transform hover:scale-105 transition-transform duration-500">
         <Image 
-          src="/LOGO PAINEL.png" 
+          src="/logo.png" 
           alt="Elite Access Logo" 
           width={280} 
           height={100} 
