@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { AlertCircle, Clock, ShieldCheck, Zap } from 'lucide-react';
+import { AlertCircle, Clock, ShieldCheck, Zap, Trophy, ShieldAlert } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -21,44 +21,72 @@ export default function Home() {
       {/* Top Badge */}
       <div className="mb-8 animate-float">
         <span className="bg-primary/20 text-primary border border-primary/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] animate-pulse-glow glow-crimson">
-          ACESSO LIMITADO
+          BRECHA NO SISTEMA DETECTADA
         </span>
       </div>
 
       {/* Hero Content */}
       <div className="max-w-4xl mx-auto space-y-6 mb-12">
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white leading-[0.9] text-glow-crimson">
-          O PAINEL QUE <span className="text-primary">MUDA O JOGO</span> ESTÁ LIBERADO.
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white leading-[0.95] text-glow-crimson uppercase">
+          🔥 O PAINEL MAIS COMPLETO DO <span className="text-primary italic">FREE FIRE</span> LIBEROU <span className="underline decoration-primary">TESTE GRÁTIS 5 DIAS</span> 😳
         </h1>
         
-        <p className="text-lg md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
-          A tecnologia que os grandes players usam em segredo acaba de abrir uma brecha. 
-          <span className="text-white font-medium block mt-2">Você foi selecionado para o teste exclusivo.</span>
+        <p className="text-lg md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
+          O Sistema 2026 chegou com a nova e exclusiva função de <span className="text-white font-bold">DESBANIMENTO</span>, Antiban e Camuflagem avançada. 
+          <span className="text-white font-medium block mt-2">Domine os apostadinhos e nunca mais sinta o medo de perder sua conta principal.</span>
         </p>
+      </div>
+
+      {/* Pain Points Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl mb-12">
+        <div className="bg-card/50 border border-border p-4 rounded-xl flex items-center gap-3 text-left">
+          <ShieldAlert className="text-primary w-10 h-10 shrink-0" />
+          <div>
+            <p className="text-white font-bold text-sm uppercase">Anti-Blacklist</p>
+            <p className="text-xs text-muted-foreground">Jogue sem cair em partidas com hacks.</p>
+          </div>
+        </div>
+        <div className="bg-card/50 border border-border p-4 rounded-xl flex items-center gap-3 text-left">
+          <Trophy className="text-secondary w-10 h-10 shrink-0" />
+          <div>
+            <p className="text-white font-bold text-sm uppercase">Foco nos Apostados</p>
+            <p className="text-xs text-muted-foreground">Invisível para qualquer sistema de live.</p>
+          </div>
+        </div>
+        <div className="bg-card/50 border border-border p-4 rounded-xl flex items-center gap-3 text-left">
+          <Zap className="text-primary w-10 h-10 shrink-0" />
+          <div>
+            <p className="text-white font-bold text-sm uppercase">Instalação Flash</p>
+            <p className="text-xs text-muted-foreground">Ative em menos de 2 minutos no Android/iOS.</p>
+          </div>
+        </div>
       </div>
 
       {/* Urgency Alert */}
       <div className="w-full max-w-lg mb-12 transform hover:scale-[1.02] transition-transform">
         <div className="bg-muted/30 border border-primary/30 rounded-2xl p-6 relative overflow-hidden group">
           <div className="absolute top-0 right-0 p-4 opacity-10">
-            <Zap className="w-24 h-24 text-primary" />
+            <AlertCircle className="w-24 h-24 text-primary" />
           </div>
           
           <div className="flex items-center gap-3 justify-center mb-2">
-            <AlertCircle className="text-primary w-6 h-6 animate-bounce" />
-            <h3 className="text-xl font-bold text-white uppercase tracking-wide">ALERTA DE ESCASSEZ</h3>
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+            </span>
+            <h3 className="text-xl font-bold text-white uppercase tracking-wide">ÚLTIMAS LICENÇAS DISPONÍVEIS</h3>
           </div>
           
           <p className="text-muted-foreground text-lg">
-            ⚠️ Somente <span className="text-primary font-bold">100 testes</span> liberados para hoje.
+            ⚠️ O servidor suporta apenas mais <span className="text-primary font-bold">12 pessoas</span> com teste ativo.
           </p>
           
           <div className="mt-4 flex justify-center gap-2">
-            <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden max-w-[200px]">
-              <div className="h-full bg-primary w-[87%] animate-pulse" />
+            <div className="h-2 w-full bg-muted rounded-full overflow-hidden max-w-[250px]">
+              <div className="h-full bg-primary w-[92%] animate-pulse" />
             </div>
           </div>
-          <p className="text-[10px] text-muted-foreground mt-2 uppercase tracking-widest">87% das vagas preenchidas</p>
+          <p className="text-[10px] text-muted-foreground mt-2 uppercase tracking-[0.3em]">92% DA CAPACIDADE ATINGIDA</p>
         </div>
       </div>
 
@@ -66,11 +94,11 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center gap-6 mb-12 text-muted-foreground font-medium">
         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
           <Clock className="w-4 h-4 text-secondary" />
-          <span>Suporte das 08h às 02h</span>
+          <span>Suporte Imediato (08h - 02h)</span>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
           <ShieldCheck className="w-4 h-4 text-whatsapp" />
-          <span>Teste 100% Garantido</span>
+          <span>Método 100% Anti-Ban</span>
         </div>
       </div>
 
@@ -82,7 +110,7 @@ export default function Home() {
       {/* Fear of Missing Out Footer */}
       <div className="max-w-md mx-auto">
         <p className="text-muted-foreground text-sm italic">
-          *Aviso: O link de acesso expira assim que as 100 vagas forem preenchidas. Se você sair desta página, sua oportunidade pode ser repassada para o próximo da fila.
+          *Atenção: Se você fechar esta página, seu IP será removido da lista de prioridade e a vaga grátis será liberada para outro jogador.
         </p>
       </div>
 
