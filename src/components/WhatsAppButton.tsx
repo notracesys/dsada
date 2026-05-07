@@ -9,8 +9,7 @@ interface WhatsAppButtonProps {
 
 export function WhatsAppButton({ className }: WhatsAppButtonProps) {
   const handleClick = () => {
-    // Replace with actual phone number if provided
-    window.open('https://wa.me/5500000000000?text=Olá, quero garantir meu acesso ao painel agora!', '_blank');
+    window.open('https://wa.me/message/VR6L7QECW7BZC1', '_blank');
   };
 
   return (
