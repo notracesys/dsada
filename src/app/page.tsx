@@ -20,8 +20,8 @@ export default function Home() {
 
       {/* Top Badge */}
       <div className="mb-8 animate-float">
-        <span className="bg-primary/20 text-primary border border-primary/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] animate-pulse-glow glow-crimson">
-          BRECHA NO SISTEMA DETECTADA
+        <span className="bg-whatsapp/20 text-whatsapp border border-whatsapp/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] animate-pulse-glow glow-whatsapp">
+          SISTEMA ONLINE
         </span>
       </div>
 
