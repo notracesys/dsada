@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { AlertCircle, Clock, ShieldCheck, Zap, Trophy, ShieldAlert } from 'lucide-react';
+import { AlertCircle, Clock, ShieldCheck, Zap, Trophy, ShieldAlert, Smartphone } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -19,10 +19,14 @@ export default function Home() {
       </div>
 
       {/* Top Badge */}
-      <div className="mb-8 animate-float">
+      <div className="mb-8 animate-float flex flex-col items-center gap-3">
         <span className="bg-whatsapp/20 text-whatsapp border border-whatsapp/50 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] animate-pulse-glow glow-whatsapp">
           SISTEMA ONLINE
         </span>
+        <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase bg-primary/10 px-3 py-1 rounded-md border border-primary/20">
+          <Smartphone className="w-4 h-4" />
+          Exclusivo para Android
+        </div>
       </div>
 
       {/* Hero Content */}
@@ -32,7 +36,7 @@ export default function Home() {
         </h1>
         
         <p className="text-lg md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
-          O Sistema 2026 chegou com a nova e exclusiva função de <span className="text-white font-bold">DESBANIMENTO</span>, Antiban e Camuflagem avançada. 
+          O Sistema 2026 chegou com a nova e exclusiva função de <span className="text-white font-bold text-glow-crimson">DESBANIMENTO</span>, Antiban e Camuflagem avançada. 
           <span className="text-white font-medium block mt-2">Domine os apostadinhos e nunca mais sinta o medo de perder sua conta principal.</span>
         </p>
       </div>
@@ -53,11 +57,11 @@ export default function Home() {
             <p className="text-xs text-muted-foreground">Invisível para qualquer sistema de live.</p>
           </div>
         </div>
-        <div className="bg-card/50 border border-border p-4 rounded-xl flex items-center gap-3 text-left">
-          <Zap className="text-primary w-10 h-10 shrink-0" />
+        <div className="bg-card/50 border border-border p-4 rounded-xl flex items-center gap-3 text-left border-primary/40">
+          <Smartphone className="text-whatsapp w-10 h-10 shrink-0" />
           <div>
-            <p className="text-white font-bold text-sm uppercase">Instalação Flash</p>
-            <p className="text-xs text-muted-foreground">Ative em menos de 2 minutos no Android/iOS.</p>
+            <p className="text-white font-bold text-sm uppercase">100% Android</p>
+            <p className="text-xs text-muted-foreground">Otimizado para todos os celulares Android.</p>
           </div>
         </div>
       </div>
@@ -90,6 +94,11 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Main CTA */}
+      <div className="w-full flex justify-center mb-6">
+        <WhatsAppButton />
+      </div>
+
       {/* Support Information */}
       <div className="flex flex-col md:flex-row items-center gap-6 mb-12 text-muted-foreground font-medium">
         <div className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10">
@@ -102,15 +111,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main CTA */}
-      <div className="w-full flex justify-center mb-6">
-        <WhatsAppButton />
-      </div>
-
       {/* Fear of Missing Out Footer */}
-      <div className="max-w-md mx-auto">
+      <div className="max-w-md mx-auto space-y-4">
+        <p className="text-primary font-bold text-sm uppercase tracking-tighter">
+          ⚠️ ATENÇÃO: NÃO FUNCIONA EM IPHONE (iOS)
+        </p>
         <p className="text-muted-foreground text-sm italic">
-          *Atenção: Se você fechar esta página, seu IP será removido da lista de prioridade e a vaga grátis será liberada para outro jogador.
+          *Se você fechar esta página, seu IP será removido da lista de prioridade e a vaga grátis será liberada para outro jogador Android.
         </p>
       </div>
 
